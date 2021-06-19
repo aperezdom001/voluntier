@@ -18,7 +18,6 @@
   "bugs": {
     "url": "https://github.com/shamseen/voluntier/issues"
   },
-  "homepage": "https://github.com/shamseen/voluntier#readme",
   "dependencies": {
     "aws-sdk": "^2.931.0",
     "bcryptjs": "^2.4.3",
