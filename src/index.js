@@ -2,14 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app';
 import { BrowserRouter as Router } from "react-router-dom";
-import Footer from './components/Footer';
+
 
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <App />
-      <Footer />
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
