@@ -14,7 +14,9 @@ function Home () {
             </p>
 
             <h3>Core Values</h3>
-            <p>Courageous, Creative, Collaborative </p>
+            <p>Courageous, Creative, Collaborative</p>
+
+            <img src="img/volunteer.png" />
         </div>
     );
 }

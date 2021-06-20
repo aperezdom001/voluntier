@@ -10,6 +10,7 @@ import Opportunites from './components/Opportunities';
 import Reviews from './components/Reviews';
 import Contact from './components/Contact';
 
+import './app.css';
 
 function App() {
     return(
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/login" exact component={Login} />
                 <Route path="/contact" exact component={Contact} />
             </Switch>
+            <Footer />
         </div>
     );
 }
