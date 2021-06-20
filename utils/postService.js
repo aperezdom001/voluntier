@@ -20,4 +20,4 @@ export function getAll() {
       }
     })
     .then(res => res.json());
-  }
+  } 
