@@ -3,7 +3,6 @@ import React from 'react';
 function Home () {
     return (
         <div>
-            <h1>Voluntier Home</h1>
             <h2>Thank you in advance for reaching out to your community!</h2>
 
             <h3>Mission Statement</h3>
