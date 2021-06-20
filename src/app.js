@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch, Redirect } from "react-router-dom";
+import { Card } from 'semantic-ui-react'
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Signup from "./components/Signup";
