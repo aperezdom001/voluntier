@@ -1,54 +1,59 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import userService from '../utils/userService';
 import { Redirect } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+
 
 const Signup = () => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState ('');
-    const [password, setPassword] = useState ('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-    const [redirect, setRedirect] = useState(false);
+    const [invalidForm, setValidForm] = useState(false)
+  const [error, setError ] = useState('')
+  const [selectedFile, setSelectedFile] = useState('')
+  const [state, setState]  = useState({
+    username: '',
+    email: '',
+    password: '',
+    passwordConf: '',
+    bio: ''
+  });
 
-    const handleName = (e) => {
-        setName(e.target.value);
-    };
+  const history = useHistory()
+  
+  function handleChange(e){
+    setState({
+      ...state,
+      [e.target.name]: e.target.value
+    })
+  }
 
-    const handleEmail = (e) => {
-        setEmail(e.target.value)
-    };
+  async function handleSubmit(e){
 
-    const handlePassword = (e) => {
-        setPassword(e.target.value)
-    };
+    e.preventDefault();
 
-    const handleConfirmPassword = (e) => {
-        setConfirmPassword(e.target.value)
-    };
+    const formData = new FormData();
+    formData.append('photo', selectedFile);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        // check to make sure passwords match
-        if (password === confirmPassword && password.length >= 8) {
-            const payload = { name, email, password };
-            let url = `${REACT_APP_SERVER_URL}/api/users/signup`;
-            try {
-                let response = await axios.post(url, payload);
-                let { data } = response;
-                console.log(data);
-                setRedirect(true);
-            } catch (error) {
-                alert('Error occurred, please try again...');
-            }
-        } else {
-            if (!password === confirmPassword) {
-                alert('Password and Confirm Password need to match. Please try again...');
-            } else {
-                alert('Password needs to be at least 8 characters or more. Please try again...');
-            }
-        }
+
+    for (let key in state){
+      formData.append(key, state[key])
     }
 
-    if (redirect) return <Redirect to="/login" />
+    try {
+      // refere to the utils/userService, to look at the signup fetch function
+      await userService.signup(formData);
+      // setTheUser in our app
+      props.handleSignUpOrLogin() // gets the token from localstorage and updates the user state in our app.js
+      // with the correct user object from the current token
+      // then route to the homepage
+      history.push('/') // defined above from react-router-dom
+      // after this we can go whereever
+
+    } catch(err){
+      console.log(err.message)
+      setError(err.message)
+    }
+
+  }
 
     return (
         <div className="row mt-4">
@@ -58,22 +63,22 @@ const Signup = () => {
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor='name'>Name</label>
-                            <input type="text" name="name" value={name} onChange={handleName} className='form-control'/>
+                            <input type="text" name="username" value={state.username} onChange={handleChange} className='form-control'/>
                         </div>
 
                         <div className="form-group">
                         <label htmlFor='email'>email</label>
-                            <input type="email" name="email" value={email} onChange={handleEmail} className='form-control'/>
+                            <input type="email" name="email" value={state.email} onChange={handleChange} className='form-control'/>
                         </div>
 
                         <div className="form-group">
                         <label htmlFor='password'>Password</label>
-                            <input type="password" name="password" value={password} onChange={handlePassword} className='form-control'/>
+                            <input type="password" name="password" value={state.password} onChange={handleChange} className='form-control'/>
                         </div>
 
                         <div className="form-group">
                         <label htmlFor='confirmPassword'>Password</label>
-                            <input type="password" name="confirmPassword" value={confirmPassword} onChange={handleConfirmPassword} className='form-control'/>
+                            <input type="password" name="passwordConf" value={state.passwordConf} onChange={handleChange} className='form-control'/>
                         </div>
                         
                         <button type ="submit" className="btn btn-primary float-right">Submit</button>
