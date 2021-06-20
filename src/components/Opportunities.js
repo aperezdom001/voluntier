@@ -1,4 +1,6 @@
-export default function Opportunites(){
+import React from 'react';
+
+function Opportunites() {
     return(
         <div>
 
@@ -19,6 +21,7 @@ export default function Opportunites(){
 
             </ul>
         </div>
-
-    )
+    );
 }
+
+export default Opportunites;

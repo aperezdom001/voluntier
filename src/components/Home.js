@@ -1,8 +1,7 @@
-import react from 'react';
+import React from 'react';
 
 function Home () {
-    return(
-        <>
+    return (
         <div>
             <h1>Voluntier Home</h1>
             <h2>Thank you in advance for reaching out to your community!</h2>
@@ -17,8 +16,7 @@ function Home () {
             <h3>Core Values</h3>
             <p>Courageous, Creative, Collaborative </p>
         </div>
-        </>
-    )
+    );
 }
 
 export default Home;

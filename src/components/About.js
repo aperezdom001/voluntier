@@ -1,7 +1,6 @@
 import React from 'react';
 import './About.css';
 
-
 const About = () => {
     return (
 
@@ -38,7 +37,7 @@ const About = () => {
                 place to live in. Voluntier was created for people to contribute some way for their future in an engaging and simple way.
             </p>
         </div>
-    )
-}
+    );
+};
 
 export default About;
