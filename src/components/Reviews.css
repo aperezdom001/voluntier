@@ -1,0 +1,17 @@
+.rHeading{
+    color: purple;
+}
+
+.review{
+    background-color: rgb(251, 231, 251);
+}
+.rDesc{
+    display:flex;
+   text-align:center;
+   font-size:25px;
+}
+
+.name{
+    font: size 25px;
+}
+
