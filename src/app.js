@@ -13,20 +13,19 @@ import Contact from './components/Contact';
 
 function App() {
     return(
-        <div className='App'>
-        <switch>
+        <div className="App">
             <Navbar/>
-             <Route path="/" exact component={Home} />
-             <Route path="/about" exact component={About} />
-             <Route path="/opportunities" exact component={Opportunites} />
-             <Route path="/reviews" exact component={Reviews} />
-             <Route path="/signup" exact component={Signup} />
-             <Route path="/login" exact component={Login} />
-             <Route path="/contact" exact component={Contact} />
-        </switch>
+            <Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="/about" exact component={About} />
+                <Route path="/opportunities" exact component={Opportunites} />
+                <Route path="/reviews" exact component={Reviews} />
+                <Route path="/signup" exact component={Signup} />
+                <Route path="/login" exact component={Login} />
+                <Route path="/contact" exact component={Contact} />
+            </Switch>
         </div>
-    
-    )
+    );
 }
 
 export default App;
