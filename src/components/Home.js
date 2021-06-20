@@ -26,7 +26,7 @@ function Home () {
                                 solutions.
                             </p>
             
-                            <h4 className="value"><em>Courageous</em></h4>
+                            <h4 className="value"><em>Collaborative</em></h4>
                             <p className="vDesc">Working together with others and to learn from them.
                             </p>
                    
