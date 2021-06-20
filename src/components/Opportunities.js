@@ -14,7 +14,7 @@ export default function Opportunites(){
                 <li>Build houses for people in need</li>
                 <li>Mentors needed for upcoming Hackathon for women and non-binary individuals</li>
                 <li>Volunteers needed for Poetry Slam</li> 
-                <li>Park cleanup at Swan's Lake</li>
+                <li>Park cleanup at Swan Lake</li>
                 <li>Donation drive for low income schools</li>
 
             </ul>
