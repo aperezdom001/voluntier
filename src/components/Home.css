@@ -1,0 +1,34 @@
+
+.homeImage{
+    max-width: 100%;
+    height: auto;
+}
+
+.thankyou{
+    font-size:30px;
+}
+
+.mHeading{
+    color: purple;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.mState{
+    font-size:25px;
+}
+
+.cHeading{
+    color: purple;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.value{
+    font-size:30px;
+}
+
+.vDesc{
+    font-size:25px;
+}
+
