@@ -1,4 +1,3 @@
-import react from 'react';
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
@@ -49,7 +48,7 @@ const Signup = () => {
         }
     }
 
-    if (redirect) return <Redirect to = '/login' />
+    if (redirect) return <Redirect to="/login" />
 
     return (
         <div className="row mt-4">
@@ -84,7 +83,7 @@ const Signup = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Signup;

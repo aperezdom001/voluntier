@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 
 function Reviews() {
     return (
@@ -22,7 +22,7 @@ function Reviews() {
                 -Mary 35, Vermont
             </p>
         </div>
-    )
+    );
 }
 
 export default Reviews;
