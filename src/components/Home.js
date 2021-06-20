@@ -3,7 +3,6 @@ import React from 'react';
 function Home () {
     return (
         <div>
-            <h1>Voluntier Home</h1>
             <h2>Thank you in advance for reaching out to your community!</h2>
 
             <h3>Mission Statement</h3>
@@ -14,7 +13,9 @@ function Home () {
             </p>
 
             <h3>Core Values</h3>
-            <p>Courageous, Creative, Collaborative </p>
+            <p>Courageous, Creative, Collaborative</p>
+
+            <img src="img/volunteer.png" />
         </div>
     );
 }
