@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Opportunites() {
+function Opportunities() {
     return(
         <div>
 
@@ -24,4 +24,4 @@ function Opportunites() {
     );
 }
 
-export default Opportunites;
+export default Opportunities;
